@@ -1,0 +1,14 @@
+$bp-desktop: 1024px;
+$bp-large-desktop: 2440px;
+@mixin breakpoint($bp) {
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+  @if $bp == large-desktop {
+    @media (min-width: $bp-large-desktop) {
+      @content;
+    }
+  }
+}

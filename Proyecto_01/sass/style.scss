@@ -1,0 +1,216 @@
+@import "./abstracts/abstracts";
+@import "./vendors/vendors";
+@import "./base/base";
+@import "./components/components";
+@import "./layout/layout";
+@import "./pages/pages";
+@import "./themes/themes";
+@import "settings";
+
+body {
+  font-family: $font-main;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint(xlargedesktop) {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  header {
+    max-width: 1920px;
+    max-height: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    position: relative;
+    .rectangle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 67%;
+      height: 87%;
+      background-color: $background-color;
+      z-index: -2;
+    }
+    .rectangle-dos {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 33%;
+      height: 87%;
+      background-color: $second-background-color;
+      z-index: -2;
+    }
+    .woman {
+      position: absolute;
+      width: 1639px;
+      top: 1%;
+      left: 16%;
+      z-index: -1;
+    }
+    .testimony {
+      position: absolute;
+      top: 47%;
+      right: 3%;
+    }
+    .flower {
+      position: absolute;
+      top: 59.53px;
+      right: 10%;
+      z-index: -2;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  padding-right: 4%;
+  ul:nth-of-type(1) {
+    gap: 60px;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  ul:nth-of-type(2) {
+    gap: 40px;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: $primary-font-weight;
+      font-size: $primary-font-size;
+    }
+    .btn {
+      @include button($primary-color);
+    }
+    .subrayado {
+      text-decoration: underline;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  max-width: 809px;
+  padding-top: 5%;
+  h1 {
+    font-size: $title-font-size;
+    color: $primary-color;
+    font-weight: $title-font-weight;
+    padding: 1rem;
+  }
+  p {
+    font-size: $subtitle-font-size;
+    color: $secondary-color;
+    font-weight: $primary-font-weight;
+    padding: 1rem;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 50px;
+    li {
+      font-size: $primary-font-size;
+      color: $primary-color;
+      font-weight: $primary-font-weight;
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .btn {
+        @include button($primary-color);
+      }
+      img {
+        width: 50px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+      }
+    }
+  }
+  .buttons {
+    padding: 3rem 1rem;
+  }
+}
+.items {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 678px;
+  height: 284px;
+  background-color: white;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  .item {
+    width: 145px;
+    height: 220px;
+    text-align: center;
+    h2 {
+      font-size: $h2-font-size;
+      color: $primary-color;
+      font-weight: $h2-font-weight;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: $primary-font-size;
+      color: $secondary-color;
+      font-weight: $primary-font-weight;
+    }
+  }
+}
+
+.testimony {
+  width: 545px;
+  height: 559px;
+  .testimony-reviews {
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    grid-template-rows: repeat(2, 1fr);
+    .primero {
+      justify-self: end;
+    }
+    .segundo {
+      justify-self: flex-start;
+      align-self: end;
+    }
+    .review {
+      display: grid;
+      padding: 2rem;
+      width: 405px;
+      height: 247px;
+      background-color: rgba(255, 255, 255, 0.449);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      img {
+        width: 32px;
+        height: 21px;
+      }
+      p {
+        font-size: $primary-font-size;
+        color: $testimony-p-color;
+        font-weight: $primary-font-weight;
+      }
+      h3 {
+        font-size: $primary-font-size;
+        color: $primary-color;
+        font-weight: $title-font-weight;
+      }
+    }
+  }
+}
