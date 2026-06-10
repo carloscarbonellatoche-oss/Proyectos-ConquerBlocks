@@ -95,6 +95,9 @@ body {
     .subrayado {
       text-decoration: underline;
     }
+    span {
+      font-family: $secondary-font;
+    }
   }
 }
 

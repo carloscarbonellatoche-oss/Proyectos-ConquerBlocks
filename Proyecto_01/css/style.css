@@ -110,6 +110,9 @@ body header .flower {
 .navbar ul .subrayado {
   text-decoration: underline;
 }
+.navbar ul span {
+  font-family: "Nunito Sans", sans-serif;
+}
 
 .title {
   display: flex;
