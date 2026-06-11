@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body header {
+  position: relative;
+  max-width: 1920px;
+  height: 1080px;
+  padding-left: 6.2%;
+  background-color: #2b2d38;
+}
+@media (min-width: 1921px) {
+  body header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+body header .elipse {
+  position: absolute;
+  overflow: hidden;
+  bottom: 1.2%;
+  right: 1.2%;
+}
+body header .elipse2 {
+  position: absolute;
+  overflow: hidden;
+  bottom: 1.2%;
+  right: 1.2%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2%;
+  padding-right: 17%;
+  padding-left: 4%;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 45px;
+}
+nav ul li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  gap: 10px;
+  color: #ababab;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+nav ul li a:hover {
+  color: white;
+}
+nav ul li a:hover img {
+  opacity: 1;
+}
+nav ul li img {
+  max-width: 35px;
+  opacity: 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  padding-right: 7%;
+}
+.hero .hero__main {
+  display: flex;
+  flex-direction: column;
+  max-width: 38%;
+  padding-top: 3%;
+}
+.hero .hero__main .hero_title {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
+.hero .hero__main .hero_title h1 {
+  font-family: "Merriweather", serif;
+  font-size: 80px;
+  color: white;
+}
+.hero .hero__main .hero_title p {
+  margin-top: 15px;
+  max-width: 87%;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: #95969b;
+}
+.hero .hero__main .hero_buttons {
+  margin-top: 50px;
+}
+.hero .hero__main .hero_buttons ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.hero .hero__main .hero_buttons ul li:nth-of-type(2) {
+  padding-top: 11px;
+}
+.hero .hero__main .hero_buttons ul li:nth-of-type(2) a:hover {
+  text-decoration: underline;
+}
+.hero .hero__main .hero_buttons ul a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+.hero .hero__main .hero_buttons ul .btn {
+  background-color: #db2a6b;
+  color: #ffffff;
+  border: none;
+  padding: 18px 45px;
+  cursor: pointer;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+.hero .hero__main .hero_buttons ul .btn:hover {
+  background-color: rgb(178.6120481928, 30.1879518072, 84.6939759036);
+}
+.hero .hero__main .hero_service {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  max-width: 616px;
+  margin-top: 22%;
+}
+.hero .hero__main .hero_service .lowbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  gap: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.hero .hero__content {
+  z-index: 1;
+  max-width: 1102px;
+  max-height: 700px;
+  display: grid;
+  gap: 30px;
+  grid-template-areas: "purple cyan yellow" "purple orange yellow" "red orange yellow";
+}
+.hero .hero__content .purple {
+  grid-area: purple;
+}
+.hero .hero__content .cyan {
+  grid-area: cyan;
+}
+.hero .hero__content .yellow {
+  align-self: center;
+  grid-area: yellow;
+}
+.hero .hero__content .orange {
+  grid-area: orange;
+}
+.hero .hero__content .red {
+  grid-area: red;
+}/*# sourceMappingURL=style.css.map */
