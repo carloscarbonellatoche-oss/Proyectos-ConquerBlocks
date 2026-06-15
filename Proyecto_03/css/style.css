@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Outfit:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+main {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+@media (min-width: 1200px) {
+  main {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.header_container {
+  position: relative;
+}
+.header_container .header_background .header_img img {
+  width: 100%;
+  display: block;
+}
+@media (min-width: 768px) {
+  .header_container .header_background {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .header_container .header_background {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+  }
+  .header_container .header_background .header_black {
+    background-color: #151515;
+    order: -1;
+  }
+}
+.header_container .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 7% 4%;
+}
+@media (min-width: 768px) {
+  .header_container .hero {
+    position: absolute;
+    top: 14%;
+    right: 0;
+    max-width: 51%;
+    gap: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .header_container .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    top: 10%;
+    left: 15%;
+    max-width: 70%;
+  }
+  .header_container .hero .hero_text {
+    max-width: 30%;
+  }
+  .header_container .hero .hero_text p {
+    font-size: 22px;
+    padding-bottom: 30%;
+  }
+}
+.header_container .hero h1 {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 55px;
+  font-weight: 900;
+}
+@media (min-width: 768px) {
+  .header_container .hero h1 {
+    font-size: 70px;
+    line-height: 65px;
+  }
+}
+@media (min-width: 1200px) {
+  .header_container .hero h1 {
+    font-size: 96px;
+    color: white;
+    line-height: 88px;
+  }
+}
+.header_container .hero ul {
+  padding-top: 35px;
+  display: inline-block;
+  width: 65%;
+}
+@media (min-width: 768px) {
+  .header_container .hero ul {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .header_container .hero ul {
+    width: 70%;
+  }
+}
+.header_container .hero ul li {
+  list-style: none;
+}
+.header_container .hero ul li a {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #151515 78%, #d5966c 78%);
+  padding: 8% 9% 8% 13%;
+}
+@media (min-width: 1440px) {
+  .header_container .hero ul li a:hover {
+    background: linear-gradient(to right, #d5966c 78%, #151515 78%);
+  }
+}
+.header_container .hero .salto {
+  display: block;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .main {
+    gap: 8px;
+  }
+}
+
+.gallery {
+  margin-top: 30%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15%;
+  }
+  .gallery .gallery_text {
+    max-width: 42%;
+    padding: 5%;
+    order: -1;
+  }
+}
+.gallery picture img {
+  width: 100%;
+}
+.gallery .gallery_text {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+.gallery .gallery_text h1 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders", sans-serif;
+  line-height: 45px;
+  font-size: 50px;
+  font-weight: 900;
+  padding-top: 5%;
+}
+.gallery .gallery_text h1 .salto {
+  display: block;
+}
+.gallery .gallery_text p {
+  line-height: 28px;
+  color: #444444;
+  padding-top: 5%;
+}
+
+.inspired {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40%;
+}
+@media (min-width: 768px) {
+  .inspired {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 300px 1fr;
+    height: 720px;
+    margin-bottom: 20%;
+  }
+  .inspired .banco {
+    grid-row: 1/span 2;
+  }
+}
+.inspired img {
+  width: 100%;
+  height: 100%;
+}
+.inspired .inspired_text {
+  background-color: #151515;
+  padding: 10% 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+@media (min-width: 768px) {
+  .inspired .inspired_text {
+    padding: 30% 9%;
+  }
+}
+.inspired .inspired_text h2 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders", sans-serif;
+  color: white;
+  line-height: 50px;
+  font-size: 50px;
+  font-weight: 900;
+}
+.inspired .inspired_text h2 .salto {
+  display: block;
+}
+.inspired .inspired_text p {
+  color: white;
+}
+
+.info {
+  background-color: #151515;
+}
+.info .info_text {
+  padding: 12% 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .info .info_text {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 7% 5% 17% 5%;
+    gap: 8%;
+    height: 300px;
+  }
+  .info .info_text p {
+    width: 50%;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .info .info_text {
+    justify-content: space-around;
+    max-width: 95%;
+    padding-left: 10%;
+  }
+  .info .info_text p {
+    width: 30%;
+  }
+}
+.info .info_text p {
+  color: white;
+}
+.info .info_text ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+@media (min-width: 1200px) {
+  .info .info_text ul {
+    gap: 20px;
+  }
+}
+
+.mapa {
+  position: relative;
+}
+.mapa picture img {
+  width: 100%;
+  display: block;
+}
+.mapa ul {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+}
+@media (min-width: 768px) {
+  .mapa ul {
+    max-width: 35%;
+    left: 5%;
+  }
+}
+@media (min-width: 1200px) {
+  .mapa ul {
+    max-width: 15%;
+    left: 11%;
+  }
+}
+.mapa ul li {
+  list-style: none;
+}
+.mapa ul li a {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #151515 78%, #d5966c 78%);
+  padding: 8% 9% 8% 13%;
+}
+@media (min-width: 1440px) {
+  .mapa ul li a:hover {
+    background: linear-gradient(to right, #d5966c 78%, #151515 78%);
+  }
+}
+.mapa ul li a {
+  background: linear-gradient(to right, #d5966c 20%, #151515 20%);
+  padding: 9% 18% 9% 7%;
+}
+.mapa ul li a img {
+  transform: rotate(180deg);
+}
+@media (min-width: 1200px) {
+  .mapa ul li a:hover {
+    background: linear-gradient(to right, #151515 20%, #d5966c 20%);
+  }
+}
+
+.location {
+  background-color: #151515;
+  color: white;
+}
+.location .location_container {
+  padding: 15% 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+@media (min-width: 768px) {
+  .location .location_container {
+    flex-direction: row;
+    padding: 10% 7%;
+    gap: 90px;
+  }
+  .location .location_container .location_title {
+    line-height: 46px;
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  .location .location_container {
+    justify-content: space-around;
+  }
+  .location .location_container .location_title {
+    line-height: 70px;
+    width: 10%;
+  }
+  .location .location_container .location_title h1 {
+    font-size: 70px;
+  }
+  .location .location_container .location_text {
+    width: 33%;
+  }
+  .location .location_container .location_text h2 {
+    font-size: 32px;
+  }
+  .location .location_container .location_text p {
+    font-size: 22px;
+  }
+}
+.location .location_container .location_title {
+  text-transform: uppercase;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+}
+.location .location_container .location_text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.location .location_container .location_text h2 {
+  font-family: "Big Shoulders", sans-serif;
+  color: #d5966c;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.location .location_container .location_text p {
+  line-height: 28px;
+}
+.location .location_container .location_text .salto {
+  display: block;
+}
+
+.info_maps {
+  background-color: #d5966c;
+}
+.info_maps .info_text p {
+  color: #151515;
+}/*# sourceMappingURL=style.css.map */
