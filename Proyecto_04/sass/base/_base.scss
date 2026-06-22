@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+@forward "animations";
+@forward "reset";
+@forward "typography";
+
+body {
+  background-color: $clr-bg-main;
+  color: $clr-text-light;
+  margin: 0;
+}

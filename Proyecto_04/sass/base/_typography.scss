@@ -1,0 +1,105 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Tamaño y espaciado de letra por tamaño
+body {
+  font-family: $ff-main;
+}
+h1 {
+  font-weight: $fw-bold;
+  font-size: $fs-xl;
+  line-height: $lh-s;
+  letter-spacing: $ls-h1-movil;
+  color: $clr-text-light;
+  .text-underline {
+    border-bottom: 4px solid $clr-primary; /* El grosor y color verde del subrayado */
+  }
+  @include breakpoint(tablet) {
+    font-size: $fs-3xl;
+    letter-spacing: $ls-h1-tablet;
+  }
+  @include breakpoint(desktop) {
+    font-size: $fs-4xl;
+    letter-spacing: $ls-h1-desk;
+  }
+}
+
+h2,
+.heading-l {
+  font-weight: $fw-bold;
+  font-size: $fs-l;
+  line-height: $lh-l;
+  letter-spacing: $ls-h2-movil;
+  color: $clr-text-light;
+  @include breakpoint(tablet) {
+    font-size: $fs-2xl;
+    line-height: $lh-m;
+    letter-spacing: $ls-h2-tablet;
+  }
+}
+
+h3 {
+  font-weight: $fw-bold;
+  font-size: $fs-m;
+  line-height: $lh-xl;
+  color: $clr-text-light;
+  letter-spacing: $ls-body;
+}
+.logo {
+  font-weight: $fw-bold;
+  font-size: $fs-m;
+  line-height: $lh-xl;
+  color: $clr-text-light;
+  letter-spacing: $ls-logo-movil;
+  @include breakpoint(tablet) {
+    font-size: $fs-l;
+    line-height: $lh-s;
+    letter-spacing: $ls-logo-desk;
+  }
+}
+
+p {
+  font-weight: $fw-medium;
+  font-size: $fs-body;
+  line-height: $lh-3xl;
+  color: $clr-text-muted;
+  letter-spacing: $ls-body;
+  @include breakpoint(tablet) {
+    font-size: $fs-s;
+    line-height: $lh-2xl;
+  }
+}
+
+p.skills {
+  font-weight: $fw-medium;
+  font-size: $fs-s;
+  line-height: $lh-2xl;
+  color: $clr-text-muted;
+  letter-spacing: $ls-body;
+}
+
+a {
+  font-weight: $fw-bold;
+  font-size: $fs-body;
+  line-height: $lh-3xl;
+  color: $clr-text-muted;
+  letter-spacing: $ls-a;
+  padding-bottom: 0.75rem; /* Separa la línea del subrayado */
+  text-decoration: none;
+  @include breakpoint(tablet) {
+    padding-bottom: 0.75rem;
+  }
+  @include breakpoint(desktop) {
+    &:hover {
+      color: $clr-primary;
+    }
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-underline {
+  border-bottom: 2px solid $clr-primary; /* El grosor y color verde del subrayado */
+}

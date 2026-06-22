@@ -1,0 +1,47 @@
+$bp-movil-xl: 390px;
+$bp-tablet: 767px;
+$bp-tablet-horizontal: 1024px;
+$bp-laptop: 1260px;
+$bp-desktop: 1440px;
+$bp-desktop-xl: 2200px;
+
+// Paleta de Colores
+$clr-bg-main: #151515;
+$clr-primary: #4ee1a0;
+$clr-bg-card: #242424;
+$clr-text-muted: #d9d9d9;
+$clr-text-light: #ffffff;
+
+// Tipografía Base
+$ff-main: "Space Grotesk", sans-serif;
+$fw-medium: 500;
+$fw-bold: 700;
+
+// Tamaños de Fuente (Font Sizes)
+$fs-body: 1rem; // 16px
+$fs-s: 1.125rem; // 18px
+$fs-m: 1.5rem; // 24px
+$fs-l: 2rem; // 32px
+$fs-xl: 2.5rem; // 40px
+$fs-2xl: 3rem; // 48px
+$fs-3xl: 4.5rem; //72px
+$fs-4xl: 5.5rem; // 88px
+
+// Interlineados (Line Heights) se calcula dividiendo los valores en px
+$lh-s: 1; // 32px / 32px; 40px / 40px; 72px / 72px; 88px / 88px
+$lh-m: 1.167; // 48px / 56px
+$lh-l: 1.25; // 32px / 40px
+$lh-xl: 1.333; // 24px / 32px
+$lh-2xl: 1.556; // 18px / 28px
+$lh-3xl: 1.625; // 16px / 26px
+
+// Espaciado entre Letras (Letter Spacing)
+$ls-h1-desk: -2.5px;
+$ls-h1-tablet: -2.05px;
+$ls-h2-tablet: -1.5px;
+$ls-h1-movil: -1.14px;
+$ls-h2-movil: -1px;
+$ls-logo-desk: -0.44px;
+$ls-logo-movil: -0.33px;
+$ls-body: 0px;
+$ls-a: 2.29px;
