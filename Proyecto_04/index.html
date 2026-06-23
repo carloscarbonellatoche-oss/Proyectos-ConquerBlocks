@@ -390,21 +390,26 @@
                 name="name"
                 placeholder="NAME"
                 required
-                class="form__input"
+                class="form__input uppercase"
               />
             </div>
 
             <!-- Grupo: Email -->
-            <div class="form__group">
+            <div class="form__group email">
               <label for="email" class="sr-only uppercase"></label>
+
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="EMAIL"
                 required
-                class="form__input"
+                class="form__input uppercase"
               />
+              <img src="img/fallo.svg" alt="error" class="error-icon" /><span
+                class="error-msg"
+                >Sorry, invalid format here</span
+              >
             </div>
 
             <!-- Grupo: Mensaje -->
@@ -416,7 +421,7 @@
                 placeholder="MESSAGE"
                 rows="4"
                 required
-                class="form__input form__textarea"
+                class="form__input form__textarea uppercase"
               ></textarea>
             </div>
 

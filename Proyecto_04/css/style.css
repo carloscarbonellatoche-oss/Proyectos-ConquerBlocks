@@ -250,22 +250,58 @@ footer .navbar {
   border-bottom: 1px solid #d9d9d9; /* Deja solo la línea horizontal inferior */
   padding: 16px 24px;
   outline: none;
+  color: #d9d9d9;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  line-height: 1.625;
+  letter-spacing: -0.33px;
 }
 .contact .contact__form .form__group .form__input:focus {
   border-bottom-color: #4ee1a0;
-  color: #d9d9d9;
-  font-family: "Space Grotesk", sans-serif;
 }
 .contact .contact__form .form__group .form__textarea {
   resize: none;
   padding: 25px 24px;
+}
+.contact .contact__form .email {
+  position: relative;
+}
+.contact .contact__form .email .error-icon {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 2rem;
+}
+.contact .contact__form .error-msg {
+  display: none;
+  color: #ff6f5b;
+  font-size: 12px;
+  text-align: right;
+}
+.contact .contact__form input[type=email]:invalid:not(:-moz-placeholder) {
+  border-bottom: 1px solid #ff4a4a;
+}
+.contact .contact__form input[type=email]:invalid:not(:placeholder-shown) {
+  border-bottom: 1px solid #ff4a4a;
+}
+.contact .contact__form input[type=email]:invalid:not(:-moz-placeholder) ~ .error-msg {
+  display: block;
+}
+.contact .contact__form input[type=email]:invalid:not(:placeholder-shown) ~ .error-msg {
+  display: block;
+}
+.contact .contact__form input[type=email]:invalid:not(:-moz-placeholder) ~ .error-icon {
+  display: block;
+}
+.contact .contact__form input[type=email]:invalid:not(:placeholder-shown) ~ .error-icon {
+  display: block;
 }
 .contact .contact__form .form__actions {
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
 }
-.contact .contact__form .btn-submit {
+.contact .contact__form .form__actions .btn-submit {
   background: transparent;
   border: none;
   color: #ffffff;
@@ -277,11 +313,11 @@ footer .navbar {
   font-weight: 700;
   letter-spacing: 2.29px;
 }
-.contact .contact__form .btn-submit:hover {
+.contact .contact__form .form__actions .btn-submit:hover {
   color: #4ee1a0;
 }
 @media (min-width: 1260px) {
-  .contact .contact__form .btn-submit {
+  .contact .contact__form .form__actions .btn-submit {
     font-size: 1rem;
   }
 }

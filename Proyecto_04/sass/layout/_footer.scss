@@ -95,10 +95,13 @@ footer {
         border-bottom: 1px solid $clr-text-muted; /* Deja solo la línea horizontal inferior */
         padding: 16px 24px;
         outline: none;
+        color: $clr-text-muted;
+        font-family: $ff-main;
+        font-size: $fs-body;
+        line-height: $lh-3xl;
+        letter-spacing: $ls-logo-movil;
         &:focus {
           border-bottom-color: $clr-primary;
-          color: $clr-text-muted;
-          font-family: $ff-main;
         }
       }
       .form__textarea {
@@ -106,27 +109,52 @@ footer {
         padding: 25px 24px;
       }
     }
+    // ------- Estilo para el error -------
+    .email {
+      position: relative;
+      .error-icon {
+        display: none; // Ocultamos la imagen
+        position: absolute;
+        right: 0;
+        top: 2rem; // ajustamos la posicion
+      }
+    }
+    .error-msg {
+      display: none;
+      color: #ff6f5b;
+      font-size: 12px;
+      text-align: right;
+    }
+    input[type="email"]:invalid:not(:placeholder-shown) {
+      border-bottom: 1px solid #ff4a4a; // Esto cambia a color rojo la linea
+    }
+    input[type="email"]:invalid:not(:placeholder-shown) ~ .error-msg {
+      display: block;
+    }
+    input[type="email"]:invalid:not(:placeholder-shown) ~ .error-icon {
+      display: block;
+    }
     .form__actions {
       display: flex;
       justify-content: flex-end;
       margin-top: 10px;
-    }
-    .btn-submit {
-      background: transparent;
-      border: none;
-      color: $clr-text-light;
-      border-bottom: 2px solid $clr-primary; /* Línea verde inferior debajo del texto */
-      padding-bottom: 0.75rem;
-      cursor: pointer;
-      transition: color 0.3s ease;
-      font-family: $ff-main;
-      font-weight: $fw-bold;
-      letter-spacing: $ls-a;
-      &:hover {
-        color: $clr-primary;
-      }
-      @include breakpoint(laptop) {
-        font-size: 1rem;
+      .btn-submit {
+        background: transparent;
+        border: none;
+        color: $clr-text-light;
+        border-bottom: 2px solid $clr-primary; /* Línea verde inferior debajo del texto */
+        padding-bottom: 0.75rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        font-family: $ff-main;
+        font-weight: $fw-bold;
+        letter-spacing: $ls-a;
+        &:hover {
+          color: $clr-primary;
+        }
+        @include breakpoint(laptop) {
+          font-size: 1rem;
+        }
       }
     }
   }
