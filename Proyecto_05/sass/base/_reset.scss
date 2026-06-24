@@ -1,0 +1,50 @@
+@use "../abstracts/abstracts" as *;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: $radius;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color $transition;
+
+  &:hover {
+    color: $color-accent-dark;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  flex: 1;
+  @include container;
+  @include section-gap;
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Registro de Conquer - Proyecto HTML con Estilos Franccesco Carbonel
+    </title>
+    <meta
+      name="description"
+      content="Registro de usuarios para acceder a los cursos y recursos de Conquer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+
+  <body class="page-registros">
+    <header>
+      <a href="index.html">
+        <img src="img/conquerlogo.svg" alt="Logo de la empresa" />
+      </a>
+      <details>
+        <summary><img src="img/burger-menu.svg" alt="" /></summary>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quienes-somos.html">Quienes somos</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="registros.html">Registros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </details>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="quienes-somos.html">Quienes somos</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="blog.html">Blog</a>
+        <a href="registros.html">Registros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Regístrate con Nosotros</h1>
+      <p class="page-intro">
+        Únete a nuestra comunidad de estudiantes y comienza tu viaje hacia el
+        éxito con Conquer. Regístrate hoy mismo para acceder a nuestros cursos
+        de alta calidad y recursos exclusivos.
+      </p>
+
+      <ul class="beneficios">
+        <li>Acceder a contenido exclusivo y actualizado.</li>
+        <li>Recibir mentoría personalizada de nuestros expertos.</li>
+        <li>Participar en eventos y webinars exclusivos para miembros.</li>
+        <li>
+          Conectar con otros estudiantes y profesionales en nuestra comunidad.
+        </li>
+      </ul>
+      <p>
+        ¡No pierdas la oportunidad de aprender con nosotros y conquistar tus
+        objetivos!
+      </p>
+
+      <form
+        class="registro-form"
+        action="#"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <fieldset>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required />
+          </div>
+
+          <div class="form-group">
+            <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="adress">Dirección</label>
+            <input type="text" id="adress" name="adress" />
+          </div>
+
+          <div class="form-group">
+            <label for="website">Sitio Web</label>
+            <input type="url" id="website" name="website" />
+          </div>
+
+          <div class="form-group form-group--file">
+            <label for="photo">Foto de Perfil</label>
+            <div class="file-input-wrapper">
+              <input type="file" id="photo" name="photo" />
+              <span class="file-btn">Seleccionar archivo</span>
+              <span class="file-name">Ningún archivo seleccionado</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="biografy">Biografía</label>
+            <textarea id="biografy" name="biografy" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <input type="submit" value="Registrarse" />
+      </form>
+    </main>
+
+    <footer>
+      <p>Copyright DE MI CASA &copy; desde 1993</p>
+      <p><a href="aviso-legal.html">Aviso Legal</a></p>
+    </footer>
+  </body>
+</html>

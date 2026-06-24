@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Contacto de Conquer - Proyecto HTML con Estilos Franccesco Carbonel
+    </title>
+    <meta
+      name="description"
+      content="Direccion, telefono y correo de contacto de Conquer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body class="page-contacto">
+    <header>
+      <a href="index.html">
+        <img src="img/conquerlogo.svg" alt="Logo de la empresa" />
+      </a>
+
+      <details>
+        <summary><img src="img/burger-menu.svg" alt="" /></summary>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quienes-somos.html">Quienes somos</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="registros.html">Registros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </details>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="quienes-somos.html">Quienes somos</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="blog.html">Blog</a>
+        <a href="registros.html">Registros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contacta con Nosotros</h1>
+      <p class="page-intro">
+        Estamos aquí para ayudarte. Si tienes alguna pregunta, comentario o
+        simplemente quieres saber más sobre nuestros cursos y servicios, no
+        dudes en ponerte en contacto con nosotros.
+      </p>
+
+      <dl>
+        <dt>Dirección:</dt>
+        <dd>Calle Falsa 123, Argentina</dd>
+        <dt>Teléfono:</dt>
+        <dd>+123 456 7890</dd>
+        <dt>Email:</dt>
+        <dd><a href="mailto:info@conquer.com">info@conquer.com</a></dd>
+      </dl>
+
+      <section class="mapa">
+        <h2>Mapa</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16320.081921946365!2d-58.76720298138877!3d-34.659773281299046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9512dd8aeb59%3A0xc78ff3fe9b8c9677!2sCalle%20falsa%20123%2C%20B1742%20Paso%20del%20Rey%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sde!4v1773692955680!5m2!1ses!2sde"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+
+      <section class="formulario">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="get">
+          <fieldset>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright DE MI CASA &copy; desde 1993</p>
+      <p><a href="aviso-legal.html">Aviso Legal</a></p>
+    </footer>
+  </body>
+</html>

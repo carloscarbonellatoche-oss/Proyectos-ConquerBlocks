@@ -1,0 +1,31 @@
+@use "../abstracts/abstracts" as *;
+
+footer {
+  @include container;
+  padding-block: 2rem;
+  border-top: 1px solid $color-border;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  hr {
+    display: none;
+  }
+
+  p {
+    color: $color-muted;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $color-muted;
+    font-size: 0.85rem;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+@use "../abstracts/abstracts" as *;
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $color-accent;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $color-border;
+  height: $header-height;
+  @include flex-between;
+  @include container;
+  gap: 1rem;
+
+  a img {
+    height: 40px;
+    width: auto;
+    border-radius: 0;
+  }
+
+  // ── <details> burger — solo móvil ──
+  details {
+    display: none; // oculto en desktop
+  }
+
+  // ── Nav desktop ──
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+
+    a {
+      color: $color-white;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.4rem 0.75rem;
+      border-radius: $radius;
+      transition:
+        color $transition,
+        background $transition;
+
+      &:hover {
+        color: $color-white;
+        background: $color-surface;
+      }
+
+      &[href="login.html"] {
+        @include btn-primary;
+        background-color: $color-bg;
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  hr {
+    display: none;
+  }
+
+  // ── Mobile ──
+  @include respond-mobile {
+    flex-wrap: wrap;
+    height: auto;
+    padding-block: 1rem;
+    align-items: center;
+    width: 100%;
+
+    // Ocultar nav desktop en móvil
+    nav {
+      display: none;
+    }
+
+    // Mostrar details burger en móvil
+    details {
+      display: block;
+      // Se posiciona relativo al header para anclar el summary
+      position: static;
+
+      // Icono burger — esquina derecha
+      summary {
+        list-style: none;
+        cursor: pointer;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 200;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid $color-border;
+        transition: background $transition;
+        padding-left: 1rem;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+        &::marker {
+          display: none;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+          border-radius: 0;
+        }
+      }
+
+      // Panel full-width al abrir
+      ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 70vh;
+        background: $color-accent;
+        z-index: 150;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 2rem;
+
+        li {
+          list-style: none;
+          width: 100%;
+          text-align: center;
+          padding: 0;
+
+          a {
+            display: block;
+            width: 100%;
+            padding: 0.9rem 1rem;
+            font-family: $font-display;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $color-white;
+            border-radius: $radius;
+            transition:
+              color $transition,
+              background $transition;
+
+            &:hover {
+              color: $color-accent;
+              background: $color-surface;
+              width: 100%;
+            }
+
+            &[href="login.html"] {
+              @include btn-primary;
+              background-color: $color-bg;
+              margin-top: 1rem;
+              font-size: 1rem;
+              padding: 0.85rem 2rem;
+              display: inline-block;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

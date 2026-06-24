@@ -1,0 +1,170 @@
+@use "variables" as *;
+@use "sass:color";
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == laptop {
+    @media (min-width: $bp-laptop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin button($color) {
+  background-color: $color;
+  color: #ffffff;
+  border: none;
+  padding: 18px 45px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.scale($color, $lightness: -10%);
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin container {
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@mixin card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: 2rem;
+  transition:
+    border-color $transition,
+    box-shadow $transition;
+
+  &:hover {
+    border-color: $color-accent;
+    box-shadow: 0 0 24px $color-accent-glow;
+  }
+}
+
+@mixin btn-primary {
+  display: inline-block;
+  background: $color-accent-dark;
+  color: $color-white;
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.6rem;
+  border-radius: $radius;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background $transition,
+    transform $transition;
+
+  &:hover {
+    background: $color-text;
+    color: $color-bg;
+    transform: translateY(-2px);
+  }
+}
+
+@mixin heading-accent {
+  border-left: 3px solid $color-accent;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@mixin form-inputs {
+  label {
+    display: block;
+    font-family: $font-display;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $color-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="date"],
+  input[type="file"],
+  textarea {
+    width: 100%;
+    background: $color-bg;
+    color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    padding: 0.75rem 1rem;
+    font-family: $font-body;
+    font-size: 1rem;
+    transition:
+      border-color $transition,
+      box-shadow $transition;
+    resize: vertical;
+
+    &:focus {
+      outline: none;
+      border-color: $color-accent;
+      box-shadow: 0 0 0 3px $color-accent-glow;
+    }
+  }
+
+  input[type="file"] {
+    padding: 0.5rem;
+    color: $color-muted;
+    cursor: pointer;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+}
+@mixin section-gap {
+  padding-block: 4rem;
+}
+
+@mixin respond-mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
