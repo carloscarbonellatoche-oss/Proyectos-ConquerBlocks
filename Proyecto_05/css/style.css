@@ -641,6 +641,12 @@ header hr {
   align-items: center;
   gap: 1rem;
 }
+@media (max-width: 768px) {
+  .page-registros .file-input-wrapper {
+    padding-top: 1rem;
+    flex-direction: column;
+  }
+}
 .page-registros .file-input-wrapper input[type=file] {
   position: absolute;
   inset: 0;
@@ -806,6 +812,7 @@ header hr {
 @media (max-width: 768px) {
   .page-registros main {
     padding-inline: 1rem;
+    max-width: 100%;
   }
 }
 

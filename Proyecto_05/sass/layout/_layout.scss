@@ -277,13 +277,16 @@
       }
     }
   }
-
   .file-input-wrapper {
     // Damos estilo al boton
     position: relative;
     display: flex;
     align-items: center;
     gap: 1rem;
+    @include respond-mobile {
+      padding-top: 1rem;
+      flex-direction: column;
+    }
 
     input[type="file"] {
       position: absolute;
@@ -371,6 +374,7 @@
     // En móvil reducir padding lateral
     @include respond-mobile {
       padding-inline: 1rem;
+      max-width: 100%;
     }
   }
 }
